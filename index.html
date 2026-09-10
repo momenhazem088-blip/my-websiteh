@@ -41,7 +41,7 @@ images.forEach((src,i)=>{
     const c=document.createElement('div');
     c.className='photo-card';
     const img=document.createElement('img');
-    img.src='images/'+encodeURIComponent(src);
+    img.src=encodeURIComponent(src);
     img.loading='lazy';
     img.alt='ذكرى '+(i+1);
     c.appendChild(img);
@@ -57,7 +57,7 @@ videos.forEach((src,i)=>{
     const c=document.createElement('div');
     c.className='movie-card';
     const v=document.createElement('video');
-    v.src='videos/'+encodeURIComponent(src);
+    v.src=encodeURIComponent(src);
     v.controls=true;
     v.playsInline=true;
     v.preload='metadata';
