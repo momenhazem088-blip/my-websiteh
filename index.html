@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>M_A | Love Letter 2026</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Tahoma,Arial,sans-serif;background:#07070d;color:#fff}
+body{overflow-x:hidden}:root{--pink:#f02b9b;--pink2:#ff62c0;--purple:#7351ed;--card:#1b1b22}
+.app{min-height:100vh;position:relative;background:radial-gradient(circle at 50% 25%,rgba(110,54,190,.14),transparent 32%),radial-gradient(circle at 20% 80%,rgba(240,43,155,.09),transparent 30%),#07070d}
+.app:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 75%,rgba(57,35,150,.16),transparent 35%)}
+header{position:fixed;top:0;left:0;right:0;height:78px;z-index:20;display:none;align-items:center;justify-content:center;gap:42px;background:linear-gradient(#07070d 35%,rgba(7,7,13,.94),transparent);backdrop-filter:blur(4px)}
+.logo{position:absolute;left:25px;color:#777;font-size:11px;letter-spacing:3px;direction:ltr}.nav{background:none;border:0;color:#ddd;font-size:21px;font-weight:800;padding:10px 8px;cursor:pointer;position:relative}.nav.active{color:#fff}.nav.active:after{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:58px;height:4px;border-radius:20px;background:var(--pink);box-shadow:0 0 16px var(--pink)}
+.screen{display:none;min-height:100vh}.screen.show{display:flex}.lock{align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:30px}.name{font:italic 82px Georgia,serif;color:#f24cae;text-shadow:0 0 24px rgba(242,76,174,.35);direction:ltr;margin-bottom:38px}.lock p{font-size:18px;color:#ddd;margin:0 0 18px}.pass{width:min(510px,84vw);height:60px;border:2px solid var(--pink);border-radius:40px;background:#05050a;color:#fff;text-align:center;outline:none;font-size:24px;letter-spacing:7px;box-shadow:0 0 10px rgba(240,43,155,.85),0 0 35px rgba(240,43,155,.24)}.btn{border:0;border-radius:35px;background:linear-gradient(90deg,#f06ac1,#6574ed);color:white;padding:14px 58px;font-size:18px;font-weight:bold;cursor:pointer;margin-top:25px;box-shadow:0 10px 35px rgba(213,54,170,.25)}.error{height:25px;color:#ff82c4;margin-top:10px}
+.page{padding:105px 18px 45px;align-items:flex-start;justify-content:center;overflow:auto}.wrap{width:min(900px,94vw)}.section-title{text-align:center;font-size:38px;color:#f04eae;margin:8px 0 5px}.section-sub{text-align:center;color:#888;margin:0 0 25px}
+.messages{display:flex;flex-direction:column;gap:16px}.message-card{position:relative;background:linear-gradient(145deg,#24252b,#17181d);border:1px solid rgba(255,255,255,.04);border-radius:22px;padding:27px 32px;box-shadow:0 18px 45px rgba(0,0,0,.48);text-align:center}.message-card .q{position:absolute;right:16px;top:-7px;color:#d9329a;font:55px Georgia}.message-text{font-size:20px;line-height:2;color:#eee}.sig{color:#e34aa8;margin-top:10px;font-size:14px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.photo-card{background:#17181e;border-radius:17px;padding:8px;border:1px solid rgba(255,255,255,.05);box-shadow:0 15px 35px rgba(0,0,0,.4)}.photo-card img{display:block;width:100%;height:260px;object-fit:cover;border-radius:11px;background:#09090d}.photo-label{text-align:center;color:#999;font-size:11px;padding:8px 2px 3px}
+.movies{display:grid;grid-template-columns:1fr;gap:18px}.movie-card{background:linear-gradient(145deg,#23242a,#17181d);padding:10px;border-radius:20px;box-shadow:0 18px 50px rgba(0,0,0,.5)}.movie-card video{display:block;width:100%;max-height:62vh;border-radius:13px;background:#050509}.movie-name{text-align:center;color:#bbb;padding:10px 0 2px;font-size:13px}
+.home{align-items:center;justify-content:center;text-align:center}.homebox{margin-top:-50px}.home-name{font:italic 65px Georgia;color:#f24cae;text-shadow:0 0 22px rgba(242,76,174,.3);direction:ltr}.date{font-size:28px;letter-spacing:5px;margin-top:24px;color:#fff}.counter{margin-top:13px;color:#aaa;font-size:16px;line-height:2}.counter strong{color:#f04eae;font-size:24px}.heart-line{color:#f04eae;font-size:34px;margin-top:20px}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:2}.float-heart{position:absolute;bottom:-35px;color:#ff45ac;opacity:.65;text-shadow:0 0 12px rgba(255,50,170,.8);animation:rise linear forwards}@keyframes rise{to{transform:translate(var(--x),-115vh) rotate(25deg);opacity:0}}
+@media(max-width:760px){header{height:68px;gap:16px;justify-content:flex-start;padding:0 12px;overflow-x:auto}.nav{font-size:17px;white-space:nowrap}.logo{display:none}.page{padding:88px 12px 35px}.name{font-size:60px}.lock p{font-size:16px}.section-title{font-size:31px}.message-card{padding:25px 20px}.message-text{font-size:18px;line-height:2}.gallery{grid-template-columns:1fr 1fr}.photo-card img{height:190px}.date{font-size:21px;letter-spacing:3px}.home-name{font-size:55px}}
+</style></head>
+<body><div class="app"><div class="hearts" id="hearts"></div>
+<header id="header"><div class="logo">LOVE • 2026</div><button class="nav active" data-go="messages">💌 رسائل</button><button class="nav" data-go="cinema">🎬 السينما</button><button class="nav" data-go="memories">🖼️ الذكريات</button><button class="nav" data-go="home">🏠 البداية</button></header>
+<section class="screen show lock" id="lock"><div class="name">M_A</div><p>منطقة محمية.. أدخل الرمز السري</p><input id="password" class="pass" type="password" placeholder="••••" autocomplete="off"><button class="btn" id="unlock">فتح الموقع</button><div class="error" id="error"></div></section>
+<section class="screen page" id="messages"><div class="wrap"><h1 class="section-title">رسائل 💌</h1><p class="section-sub">كلمات صغيرة من القلب</p><div class="messages">
+<div class="message-card"><div class="q">“</div><div class="message-text">من يوم ما دخلت حياتي، بقت في حاجات كتير أحلى، وبقيت أحب تفاصيل صغيرة مكنتش باخد بالي منها.</div><div class="sig">❤️</div></div>
+<div class="message-card"><div class="q">“</div><div class="message-text">يمكن مش بعرف أقول كل اللي جوايا، بس وجودك بالنسبالي حاجة غالية، وكل لحظة حلوة بينا ليها مكان خاص عندي.</div><div class="sig">❤️</div></div>
+<div class="message-card"><div class="q">“</div><div class="message-text">نفسي الأيام الجاية تفضل مليانة ضحك وذكريات حلوة، ونفضل نفتكر كل لحظة جميلة جمعتنا بابتسامة.</div><div class="sig">❤️</div></div>
+<div class="message-card"><div class="q">“</div><div class="message-text">احنا ديما نكد معا بعض<br>بس انا مش قصدي ازعلك ولا اسيبك عشان انتي كل حاجة لي<br>وربنا يخليكي ليا ياقلبي</div><div class="sig">من Mo_o ❤️</div></div>
+</div></div></section>
+<section class="screen page" id="cinema"><div class="wrap"><h1 class="section-title">السينما 🎬</h1><p class="section-sub">فيديوهات وذكريات جميلة</p><div class="movies" id="movies"></div></div></section>
+<section class="screen page" id="memories"><div class="wrap"><h1 class="section-title">الذكريات 🖼️</h1><p class="section-sub">كل صورة حكاية.. وكل لحظة ليها مكان ❤️</p><div class="gallery" id="gallery"></div></div></section>
+<section class="screen home" id="home"><div class="homebox"><div class="home-name">M_A</div><div class="date">21 / 03 / 2026</div><div class="counter" id="counter"></div><div class="heart-line">♥</div></div></section>
+<audio id="music" preload="auto" loop><source src="song.mp3" type="audio/mpeg"></audio>
+<script>
+const PASSWORD='8/8/2010';
+const images=["1065382855597702580.jpg","photo1 (2).jpg","photo1.jpg","WhatsApp Image 2026-09-10 at 11.05.17 PM.jpeg","WhatsApp Image 2026-09-10 at 11.05.20 PM.jpeg","WhatsApp Image 2026-09-10 at 11.06.07 PM.jpeg","WhatsApp Image 2026-09-10 at 11.10.57 PM.jpeg","WhatsApp Image 2026-09-10 at 11.10.58 PM.jpeg","دبي.jpg"];
+const videos=["WhatsApp Video 2026-09-09 at 1.31.52 AM.mp4","WhatsApp Video 2026-09-09 at 1.33.04 AM.mp4","WhatsApp Video 2026-09-09 at 1.44.01 AM.mp4"];
+const gallery=document.getElementById('gallery');
+images.forEach((src,i)=>{
+    const c=document.createElement('div');
+    c.className='photo-card';
+    const img=document.createElement('img');
+    img.src='images/'+encodeURIComponent(src);
+    img.loading='lazy';
+    img.alt='ذكرى '+(i+1);
+    c.appendChild(img);
+    const label=document.createElement('div');
+    label.className='photo-label';
+    label.textContent='لحظة جميلة • '+String(i+1).padStart(2,'0');
+    c.appendChild(label);
+    gallery.appendChild(c);
+});
+
+const movies=document.getElementById('movies');
+videos.forEach((src,i)=>{
+    const c=document.createElement('div');
+    c.className='movie-card';
+    const v=document.createElement('video');
+    v.src='videos/'+encodeURIComponent(src);
+    v.controls=true;
+    v.playsInline=true;
+    v.preload='metadata';
+    c.appendChild(v);
+    const label=document.createElement('div');
+    label.className='movie-name';
+    label.textContent='فيديو • '+(i+1);
+    c.appendChild(label);
+    movies.appendChild(c);
+});
+function go(id){
+    document.querySelectorAll('.screen').forEach(s=>s.classList.remove('show'));
+    document.getElementById(id).classList.add('show');
+    document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active',n.dataset.go===id));
+
+    if(id==='cinema'){
+        music.pause();
+    }else{
+        document.querySelectorAll('#movies video').forEach(v=>v.pause());
+        music.play().catch(()=>{});
+    }
+}
+document.querySelectorAll('.nav').forEach(n=>n.onclick=()=>go(n.dataset.go));
+document.getElementById('unlock').onclick=async()=>{
+    const p=document.getElementById('password');
+    if(p.value===PASSWORD){
+        document.getElementById('lock').classList.remove('show');
+        document.getElementById('header').style.display='flex';
+        try{
+            music.currentTime=0;
+            await music.play();
+        }catch(e){
+            document.getElementById('error').textContent='اضغط مرة أخرى لتشغيل الأغنية';
+        }
+        go('messages');
+    }else{
+        document.getElementById('error').textContent='كلمة السر غير صحيحة';
+    }
+};
+document.getElementById('password').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('unlock').click()});
+function updateCounter(){
+    const start=new Date(2026,2,21,0,0,0);
+    const now=new Date();
+    let diff=Math.max(0,now-start);
+    const days=Math.floor(diff/86400000); diff%=86400000;
+    const hours=Math.floor(diff/3600000); diff%=3600000;
+    const minutes=Math.floor(diff/60000); diff%=60000;
+    const seconds=Math.floor(diff/1000);
+    document.getElementById('counter').innerHTML=
+      `من 21 مارس 2026 ❤️<br><strong>${days}</strong> يوم • <strong>${String(hours).padStart(2,'0')}</strong> ساعة • <strong>${String(minutes).padStart(2,'0')}</strong> دقيقة • <strong>${String(seconds).padStart(2,'0')}</strong> ثانية`;
+}
+updateCounter();
+setInterval(updateCounter,1000);
+const hb=document.getElementById('hearts');function heart(){const h=document.createElement('div');h.className='float-heart';h.textContent=['♥','♡','❤'][Math.floor(Math.random()*3)];h.style.left=Math.random()*100+'%';h.style.fontSize=(12+Math.random()*25)+'px';h.style.setProperty('--x',(Math.random()*140-70)+'px');h.style.animationDuration=(6+Math.random()*6)+'s';hb.appendChild(h);setTimeout(()=>h.remove(),13000)}setInterval(heart,650);for(let i=0;i<12;i++)setTimeout(heart,i*150);
+</script></div></body></html>
